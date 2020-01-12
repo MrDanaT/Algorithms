@@ -1,4 +1,4 @@
-package edu.ap.danati.testproject2;
+package edu.ap.danati.sorteeralgoritmen;
 
 import java.util.ArrayList;
 import java.util.Collections;

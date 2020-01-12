@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package edu.ap.danati.testproject2;
+package edu.ap.danati.sorteeralgoritmen;
 
 import java.util.Random;
 

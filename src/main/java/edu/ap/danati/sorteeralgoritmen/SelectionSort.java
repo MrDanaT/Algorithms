@@ -3,28 +3,29 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package edu.ap.danati.testproject2;
+package edu.ap.danati.sorteeralgoritmen;
 
 /**
  *
  * @author danai
  */
-public class Bubblesort extends Sort {
+public class SelectionSort extends Sort {
 
-    public Bubblesort() {
-        super("Bubblesort");
+    public SelectionSort() {
+        super("Selectionsort");
     }
 
     @Override
     public void sort(int[] array) {
-
+        int min;
         for (int i = 0; i < array.length; i++) {
-            for (int j = 1; j < array.length - i; j++) {
-                if (array[j - 1] > array[j]) {
-                    swap(array, j - 1, j);
+            min = i;
+            for (int j = i + 1; j < array.length; j++) {
+                if (array[j] < array[min]) {
+                    min = j;
                 }
-
             }
+            swap(array, i, min);
         }
     }
 }

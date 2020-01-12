@@ -5,7 +5,6 @@
  */
 package zoekalgoritmen;
 
-import com.sun.java.swing.plaf.windows.WindowsTreeUI;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collections;
