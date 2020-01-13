@@ -18,16 +18,16 @@ public class Mergesort extends Sort {
     }
 
     @Override
-    public void sort(int[] array) {
-        mergesort(array);
+    public int[] sort(int[] array) {
+        return mergesort(array);
     }
 
-    public void mergesort(int[] arr) {
+    public int[] mergesort(int[] arr) {
         if (arr.length <= 1) {
-            return;
+            return arr;
         }
 
-        int mid = arr.length/ 2;
+        int mid = arr.length / 2;
 
         int[] arr1 = Arrays.copyOf(arr, mid);
         int[] arr2 = Arrays.copyOfRange(arr, mid, arr.length);
@@ -36,6 +36,8 @@ public class Mergesort extends Sort {
         mergesort(arr2);
 
         merge(arr, arr1, arr2);
+
+        return arr;
     }
 
     public void merge(int[] arr, int[] arr1, int[] arr2) {

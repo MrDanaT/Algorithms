@@ -16,7 +16,7 @@ public class Bubblesort extends Sort {
     }
 
     @Override
-    public void sort(int[] array) {
+    public int[] sort(int[] array) {
 
         for (int i = 0; i < array.length; i++) {
             for (int j = 1; j < array.length - i; j++) {
@@ -26,5 +26,7 @@ public class Bubblesort extends Sort {
 
             }
         }
+        
+        return array;
     }
 }

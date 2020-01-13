@@ -25,8 +25,8 @@ public class Array {
         this.array = array;
     }
 
-    public void sort(Sort algoritme) {
-        algoritme.init(array);
+    public int[] sort(Sort algoritme) {
+       return algoritme.init(array);
     }
 
     @Override

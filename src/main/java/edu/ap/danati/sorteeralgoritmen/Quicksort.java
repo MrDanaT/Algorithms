@@ -16,11 +16,11 @@ public class Quicksort extends Sort {
     }
 
     @Override
-    public void sort(int[] array) {
-        quicksort(array, 0, array.length - 1);
+    public int[] sort(int[] array) {
+        return quicksort(array, 0, array.length - 1);
     }
 
-    public void quicksort(int[] arr, int lo, int hi) {
+    public int[] quicksort(int[] arr, int lo, int hi) {
         int pivot = lo + (hi - lo) / 2;
         int i = lo, j = hi;
 
@@ -45,6 +45,8 @@ public class Quicksort extends Sort {
         if (j > lo) {
             quicksort(arr, lo, j);
         }
+
+        return arr;
     }
 
 }

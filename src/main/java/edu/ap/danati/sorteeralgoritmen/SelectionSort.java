@@ -16,7 +16,7 @@ public class SelectionSort extends Sort {
     }
 
     @Override
-    public void sort(int[] array) {
+    public int[] sort(int[] array) {
         int min;
         for (int i = 0; i < array.length; i++) {
             min = i;
@@ -27,5 +27,7 @@ public class SelectionSort extends Sort {
             }
             swap(array, i, min);
         }
+
+        return array;
     }
 }

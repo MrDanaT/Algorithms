@@ -16,7 +16,7 @@ public class BubblesortOptimized extends Sort {
     }
 
     @Override
-    public void sort(int[] array) {
+    public int[] sort(int[] array) {
         boolean swapped;
         for (int i = 0; i < array.length; i++) {
             swapped = true;
@@ -32,6 +32,8 @@ public class BubblesortOptimized extends Sort {
             }
 
         }
+
+        return array;
     }
 
 }

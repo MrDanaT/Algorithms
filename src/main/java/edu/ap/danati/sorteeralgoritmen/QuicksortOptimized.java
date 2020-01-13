@@ -16,11 +16,11 @@ public class QuicksortOptimized extends Sort {
     }
 
     @Override
-    public void sort(int[] array) {
-        quicksort(array, 0, array.length - 1);
+    public int[] sort(int[] array) {
+        return quicksort(array, 0, array.length - 1);
     }
 
-    public void quicksort(int[] arr, int lo, int hi) {
+    public int[] quicksort(int[] arr, int lo, int hi) {
         if (hi - lo <= 5) {
             insertion(arr, lo, hi);
         } else {
@@ -50,6 +50,8 @@ public class QuicksortOptimized extends Sort {
                 quicksort(arr, lo, j);
             }
         }
+
+        return arr;
     }
 
     public void insertion(int[] arr, int start, int end) {

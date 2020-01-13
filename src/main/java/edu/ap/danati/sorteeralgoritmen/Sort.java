@@ -47,15 +47,17 @@ public abstract class Sort implements Comparable<Sort> {
 
     }
 
-    public void init(int[] array) {
+    public int[] init(int[] array) {
         int[] copy = array.clone();
         long start = System.nanoTime();
         sort(copy);
         long end = System.nanoTime() - start;
         this.setDuration(end);
+
+        return copy;
     }
 
-    public abstract void sort(int[] array);
+    public abstract int[] sort(int[] array);
 
     @Override
     public int compareTo(Sort o) {
